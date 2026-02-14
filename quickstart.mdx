@@ -1,0 +1,136 @@
+---
+title: Getting Started with Documentation Space
+description: Step-by-step guide to set up and start using your default documentation space for project management.
+---
+
+## Prerequisites
+
+<Callout kind="info" title="Before You Begin">
+Ensure you have:
+- A valid email address for account creation
+- Modern web browser (Chrome, Firefox, Safari, or Edge)
+- Optional: Git client for advanced project syncing
+</Callout>
+
+## Create Your Account and Log In
+
+Follow these steps to get started with Rahul Sharma's Documentation Space.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit `https://docs.example.com/signup` and enter your email and password.
+    
+    Click **Create Account** to receive a verification email.
+  </Step>
+  
+  <Step title="Verify Email" icon="mail">
+    Check your inbox and click the verification link.
+    
+    This activates your account.
+  </Step>
+  
+  <Step title="Log In" icon="log-in">
+    Return to `https://docs.example.com/login`.
+    
+    Enter your credentials to access the dashboard.
+  </Step>
+</Steps>
+
+## Configure Your Space
+
+Customize your documentation space settings.
+
+<Expandable title="Default Configuration Options" default-open="true">
+Set your space name and default themes via the settings panel.
+
+```json
+{
+  "spaceName": "My Project Docs",
+  "theme": "light",
+  "defaultLanguage": "en"
+}
+```
+</Expandable>
+
+<Tabs>
+  <Tab title="Web UI" icon="globe">
+    Navigate to **Space Settings > General**.
+    
+    Update fields and save changes.
+  </Tab>
+  
+  <Tab title="API Config" icon="api">
+    Use the configuration endpoint:
+    
+````bash
+curl -X POST https://api.example.com/v1/spaces/config \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -d '{"spaceName": "My Project Docs"}'
+````
+  </Tab>
+</Tabs>
+
+## Upload Your First Documents
+
+Add content to your space.
+
+<Steps>
+  <Step title="Upload via Drag-and-Drop" icon="upload">
+    Go to the **Documents** section.
+    
+    Drag Markdown (`.mdx`), PDF, or image files directly into the upload area.
+  </Step>
+  
+  <Step title="Import from Git" icon="git-branch">
+    Connect your repository:
+    
+    <CodeGroup tabs="GitHub, GitLab">
+```yaml
+# github.com/user/repo
+provider: github
+repo: user/project-docs
+branch: main
+```
+```yaml
+# gitlab.com/user/repo
+provider: gitlab
+repo: user/project-docs
+branch: main
+```
+    </CodeGroup>
+  </Step>
+</Steps>
+
+## Organize Projects
+
+Structure your documentation effectively.
+
+| Organization Method | Description | Best For |
+|---------------------|-------------|----------|
+| Folders | Nested directories for docs | Large projects |
+| Tags | Keywords for cross-referencing | Themed content |
+| Spaces | Separate areas per project | Teams or clients |
+
+<Callout kind="tip">
+Use tags like `api`, `guide`, `reference` for quick searches.
+</Callout>
+
+## Next Steps
+
+<Columns cols={3}>
+  <Card title="Introduction" icon="book-open" href="/introduction">
+    Learn core features and navigation.
+  </Card>
+  
+  <Card title="Advanced Organization" icon="folder" href="/guides/organization">
+    Deep dive into tags and workflows.
+  </Card>
+  
+  <Card title="Collaboration" icon="users" href="/authentication">
+    Set up team access and permissions.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+Your documentation space is ready! Explore the dashboard and start building.
+</Callout>

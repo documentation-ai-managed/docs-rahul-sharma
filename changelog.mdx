@@ -1,0 +1,130 @@
+---
+title: Changelog
+description: Track updates and improvements to the Rahul Sharma documentation platform with version history.
+---
+
+## Latest Updates
+
+<Callout kind="info">
+  Stay up to date with the newest features, bug fixes, and improvements to the Rahul Sharma documentation platform. Check this page regularly for release notes.
+</Callout>
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+## New Features
+
+- Added support for custom brand colors in the theme configuration, allowing you to match your site's `#1B85FF` primary color effortlessly.
+- Introduced search enhancements with `Ask Genius` AI-powered query resolution for instant help on products and integrations.
+
+## Improvements
+
+- Enhanced documentation rendering performance by `>30%` for faster page loads.
+- Updated component library with new icons and better responsive layouts.
+
+## Bug Fixes
+
+- Fixed parsing errors in nested code blocks within JSX components.
+- Resolved issues with special character escaping in prose text.
+
+</Update>
+
+<Update label="2024-09-25" description="v1.2.0" tags={["feature", "bugfix"]}>
+## New Features
+
+- Added `New` tag badges for highlighting recently updated sections.
+- Integrated product navigation cards for quick access to Checkout, SDK, and API docs.
+
+## Bug Fixes
+
+- Corrected Mermaid diagram rendering to use proper code block syntax only.
+- Fixed heading hierarchy enforcement to always start with H2 in page bodies.
+
+## Upgrade Instructions
+
+Update your configuration:
+
+<CodeGroup tabs="npm,yarn">
+````bash
+npm install rahul-sharma-docs@1.2.0
+````
+
+````bash
+yarn add rahul-sharma-docs@1.2.0
+````
+</CodeGroup>
+
+</Update>
+
+<Update label="2024-08-10" description="v1.1.0" tags={["breaking", "feature"]}>
+## Breaking Changes
+
+- Removed deprecated H1 usage in favor of frontmatter titles exclusively.
+- Changed default component spacing to require blank lines around markdown in JSX.
+
+## New Features
+
+- Full support for Update components in changelogs with tag categorization.
+- Added Columns and Cards for feature grids in documentation pages.
+
+## Improvements
+
+- Better accessibility with required `alt` and `title` attributes on all images and embeds.
+
+</Update>
+
+## Upgrade Guide
+
+Follow these steps to upgrade to the latest version:
+
+<Steps>
+  <Step title="Backup Configuration" icon="database">
+    Save your current `docs.config.js` file.
+
+    ```
+    cp docs.config.js docs.config.js.backup
+    ```
+  </Step>
+  <Step title="Install Latest Version" icon="download">
+    <Tabs>
+      <Tab title="npm" icon="package">
+````bash
+npm install rahul-sharma-docs@latest
+````
+      </Tab>
+      <Tab title="yarn" icon="package">
+````bash
+yarn add rahul-sharma-docs@latest
+````
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step title="Review Changes" icon="settings">
+    Check the `<Callout kind="alert">` sections in each Update for breaking changes.
+  </Step>
+  <Step title="Test Pages" icon="check-circle">
+    Build and preview your docs to ensure no parsing errors.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  After upgrading, regenerate your MDX pages to benefit from new components like enhanced `Tabs` and `Columns`.
+</Callout>
+
+## Quick Links
+
+<Columns cols={3}>
+  <Card title="Introduction" icon="book-open" href="/introduction">
+    Get started with the documentation platform.
+  </Card>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Set up in minutes.
+  </Card>
+  <Card title="Customization" icon="settings" href="/configuration">
+    Tailor to your brand.
+  </Card>
+</Columns>
+
+| Version | Date       | Key Changes                  |
+|---------|------------|------------------------------|
+| v1.3.0  | 2024-10-15 | AI search, brand colors      |
+| v1.2.0  | 2024-09-25 | Navigation cards, fixes      |
+| v1.1.0  | 2024-08-10 | Breaking changes, new layout |

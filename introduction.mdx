@@ -1,0 +1,121 @@
+---
+title: Introduction to Rahul Sharma Documentation
+description: Overview of the Rahul Sharma documentation space, designed for organizing and managing project documentation efficiently.
+---
+
+<Callout kind="info" title="Starter Kit Template">
+  This documentation was generated as a starter kit template based on your brand. Please review and customize the content to accurately reflect your product's features, APIs, and capabilities.
+</Callout>
+
+## Overview
+
+Welcome to the Rahul Sharma documentation space. Use this centralized hub to organize, manage, and share all your project documentation efficiently. Whether you document codebases, APIs, user guides, or team processes, this space provides tools to create structured, searchable, and versioned docs.
+
+You get a fully customizable MDX-powered site with components for rich content like code examples, diagrams, and interactive guides. Start by editing these pages or adding new ones to match your needs.
+
+## Key Features
+
+Discover the core capabilities that make this documentation space powerful.
+
+<Columns cols={3}>
+  <Card title="Structured Content" icon="book-open" href="#structured-content">
+    Build pages with headings, lists, tables, and JSX components for engaging docs.
+  </Card>
+  <Card title="Interactive Components" icon="components" href="#interactive-components">
+    Use tabs, steps, cards, and callouts to create dynamic, user-friendly guides.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track changes with Git integration and maintain release notes effortlessly.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Get up and running in minutes. Follow these steps to customize your docs.
+
+<Steps>
+  <Step title="Fork and Clone" icon="download">
+    Fork this repository and clone it locally:
+    
+````bash
+git clone https://github.com/yourusername/rahul-sharma-docs.git
+cd rahul-sharma-docs
+````
+  </Step>
+  
+  <Step title="Install Dependencies" icon="package">
+    Install with your preferred package manager:
+    
+    <CodeGroup tabs="npm,yarn">
+    ````bash
+npm install
+    ````
+    ````bash
+yarn install
+    ````
+    </CodeGroup>
+  </Step>
+  
+  <Step title="Start Development Server" icon="play">
+    Launch the local server:
+    
+````bash
+npm run dev
+# or
+yarn dev
+````
+    
+    Open `http://localhost:3000` to preview your docs.
+  </Step>
+  
+  <Step title="Customize Content" icon="edit-3">
+    Edit `.mdx` files in the `docs` folder. Add your pages, update frontmatter, and deploy.
+  </Step>
+</Steps>
+
+## Navigation Guide
+
+Explore sections tailored for documentation management.
+
+<Tabs>
+  <Tab title="Core Sections" icon="layout">
+    - **Quickstart**: Set up your first project page.
+    - **Authentication**: Manage access if needed.
+    - **Configuration**: Customize themes and components.
+    
+    Use the sidebar for quick access.
+  </Tab>
+  
+  <Tab title="Advanced" icon="settings">
+    - **Changelog**: Track updates to your docs.
+    - **FAQ**: Common questions and solutions.
+    
+    Link between pages with relative paths like `/quickstart`.
+  </Tab>
+</Tabs>
+
+## Brand Guidelines
+
+Follow these guidelines to maintain consistency across your docs.
+
+<Expandable title="Primary Brand Color" default-open="true">
+  Use `{ #1B85FF }` as your primary brand color for headings, links, and accents. Apply it in CSS customizations:
+  
+````css
+:root {
+  --brand-primary: #1B85FF;
+}
+
+a {
+  color: var(--brand-primary);
+}
+````
+</Expandable>
+
+<Expandable title="Typography and Icons">
+  Stick to system fonts for readability. Use Lucide icons like `book-open`, `code`, and `zap` for visual appeal. Avoid custom fonts unless specified.
+</Expandable>
+
+<Callout kind="tip" title="Next Steps">
+  Review [Quickstart](/quickstart) for detailed setup. Customize features to fit your projects, then deploy to your hosting provider.
+</Callout>
