@@ -1,40 +1,50 @@
 ---
 title: Core Concepts of Documentation Management
-description: Understand the fundamental principles and architecture behind the documentation platform for effective use.
+description: >-
+  Understand the fundamental principles and architecture behind the
+  documentation platform for effective use.
 ---
-
 ## Overview
 
 Rahul Sharma's documentation platform provides a structured space to organize project knowledge. You create, manage, and share docs efficiently using a hierarchical system, version control, collaboration tools, and integrations.
 
 This page covers the four core concepts: document hierarchy, version control basics, collaboration workflows, and external tool integrations. Master these to build scalable documentation.
 
-<Callout kind="info">
-These concepts form the foundation. Customize them to fit your project's needs.
+<Callout kind="info" collapsed="false">
+  Welcome to Rahul Sharma's doc
 </Callout>
-
-## Key Concepts
 
 Visualize the main pillars using these feature cards:
 
-<Columns cols={2}>
-  <Card title="Hierarchy" icon="layers" href="#document-hierarchy">
+<Columns cols="2">
+  <Card title="First Card" icon="alarm-clock-check" horizontal="false" target="_self">
+    Card description...
+  </Card>
+
+  <Card title="Second Card" horizontal="false">
+    Card description...
+  </Card>
+</Columns>
+
+<Columns cols="2">
+  <Card title="Hierarchy" href="#document-hierarchy" icon="layers" horizontal="false">
     Organize docs in nested folders and pages for intuitive navigation.
   </Card>
-  <Card title="Version Control" icon="git-branch" href="#version-control">
+
+  <Card title="Version Control" href="#version-control" icon="git-branch" horizontal="false">
     Track changes with Git integration for reliable history.
   </Card>
-  <Card title="Collaboration" icon="users" href="#collaboration">
+
+  <Card title="Collaboration" href="#collaboration" icon="users" horizontal="false">
     Review, comment, and merge contributions seamlessly.
   </Card>
-  <Card title="Integrations" icon="plug" href="#integrations">
+
+  <Card title="Integrations" href="#integrations" icon="plug" horizontal="false">
     Connect with tools like GitHub, Slack, and CI/CD pipelines.
   </Card>
 </Columns>
 
 ## Document Hierarchy and Structure
-
-<IDocument-hierarchy />
 
 Structure your docs like a tree. Top-level pages (e.g., `/introduction`) contain sub-pages (e.g., `/quickstart`). Use YAML frontmatter for metadata.
 
@@ -50,7 +60,7 @@ graph TD
 
 This setup ensures logical navigation. Define hierarchy in a `nav.yaml` file:
 
-````yaml
+```yaml
 nav:
   - title: Introduction
     href: /introduction
@@ -58,32 +68,32 @@ nav:
     children:
       - title: Hierarchy
         href: /concepts#hierarchy
-````
+```
 
 ## Version Control Basics
 
 Integrate Git for change tracking. You commit docs as Markdown/MDX files.
 
-<CodeGroup tabs="Bash,PowerShell">
-````bash
-git init
-git add docs/
-git commit -m "Initial docs"
-git push origin main
-````
+<CodeGroup show-lines="true" tabs={[]}>
+  ```bash
+  git init
+  git add docs/
+  git commit -m "Initial docs"
+  git push origin main
+  ```
 
-````powershell
-git init
-git add docs/
-git commit -m "Initial docs"
-git push origin main
-````
+  ```powershell
+  git init
+  git add docs/
+  git commit -m "Initial docs"
+  git push origin main
+  ```
 </CodeGroup>
 
 Branch for features: `git checkout -b feature/new-guide`. Merge via pull requests.
 
-<Callout kind="tip">
-Use semantic commit messages: `feat: add concepts page`, `fix: typo in overview`.
+<Callout kind="tip" collapsed="false">
+  Use semantic commit messages: `feat: add concepts page`, `fix: typo in overview`.
 </Callout>
 
 ## Collaboration Workflows
@@ -91,16 +101,19 @@ Use semantic commit messages: `feat: add concepts page`, `fix: typo in overview`
 Follow these steps for team contributions:
 
 <Steps>
-  <Step title="Fork or Branch" icon="git-branch">
+  <Step title="Fork or Branch" icon="git-branch" title-type="p">
     Create a branch: `git checkout -b rahul/new-feature`.
   </Step>
-  <Step title="Edit Docs" icon="edit-3">
+
+  <Step title="Edit Docs" icon="edit-3" title-type="p">
     Update MDX files locally.
   </Step>
-  <Step title="Review Changes" icon="eye">
+
+  <Step title="Review Changes" icon="eye" title-type="p">
     Push and open a pull request. Add reviewers.
   </Step>
-  <Step title="Merge and Deploy" icon="git-merge">
+
+  <Step title="Merge and Deploy" icon="git-merge" title-type="p">
     Approve, merge, and trigger preview builds.
   </Step>
 </Steps>
@@ -112,16 +125,17 @@ Connect your docs to ecosystems using these methods:
 <Tabs>
   <Tab title="GitHub" icon="github">
     Sync repos automatically. Webhooks notify on pushes.
-    
+
     ```yaml
     webhook:
       url: https://docs.example.com/webhook/github
       events: [push, pull_request]
     ```
   </Tab>
+
   <Tab title="Slack" icon="message-circle">
     Post updates to channels.
-    
+
     ```javascript
     fetch('https://hooks.slack.com/services/YOUR_WEBHOOK', {
       method: 'POST',
@@ -129,27 +143,30 @@ Connect your docs to ecosystems using these methods:
     });
     ```
   </Tab>
+
   <Tab title="CI/CD" icon="play">
     Build previews on Netlify/Vercel.
-    
-    <Expandable title="Advanced Config">
+
+    <Expandable title="Advanced Config" default-open="false">
       Set `DOCS_PREVIEW=true` in environment variables.
     </Expandable>
   </Tab>
 </Tabs>
 
-<Callout kind="success">
-Integrate early to automate workflows and reduce manual effort.
+<Callout kind="success" collapsed="false">
+  Integrate early to automate workflows and reduce manual effort.
 </Callout>
 
 ## Best Practices
 
 - Maintain flat hierarchies: Limit nesting to 3 levels.
+
 - Use consistent naming: Kebab-case for files (`core-concepts.mdx`).
+
 - Automate deployments with GitHub Actions.
 
 <Expandable title="Advanced: Custom Plugins" default-open="false">
-Develop MDX plugins for custom components.
+  Develop MDX plugins for custom components.
 </Expandable>
 
 These concepts empower you to scale documentation as projects grow.
